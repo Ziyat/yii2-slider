@@ -1,15 +1,17 @@
 <?php
 
-namespace domain\modules\slider\controllers;
+namespace abdualiym\slider\controllers;
 
-use domain\modules\slider\entities\Slide;
-use domain\modules\slider\forms\SlideForm;
-use domain\modules\slider\forms\SlideSearch;
-use domain\modules\slider\Module;
-use domain\modules\slider\services\SlideManageService;
+use abdualiym\slider\entities\Slide;
+use abdualiym\slider\forms\SlideForm;
+use abdualiym\slider\forms\SlideSearch;
+use abdualiym\slider\Module;
+use abdualiym\slider\repositories\SlideRepository;
+use abdualiym\slider\services\SlideManageService;
+use abdualiym\slider\services\TransactionManager;
 use Yii;
+use yii\base\Component;
 use yii\filters\VerbFilter;
-use yii\helpers\VarDumper;
 use yii\web\Controller;
 
 /**
@@ -17,10 +19,9 @@ use yii\web\Controller;
  */
 class SlideController extends Controller
 {
-
     private $service;
 
-    public function __construct(string $id, Module $module, SlideManageService $service, array $config = [])
+    public function __construct(string $id, Slider $module, SlideManageService $service, array $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $service;
@@ -87,14 +88,14 @@ class SlideController extends Controller
 //        $form->validate();
 //        VarDumper::dump($form->getErrors(), 10, true);
 //        die;
-        try {
-            $this->service->edit($slide->id, $form);
-            return $this->redirect(['view', 'id' => $slide->id]);
-        } catch (\DomainException $e) {
-            Yii::$app->errorHandler->logException($e);
-            Yii::$app->session->setFlash('error', $e->getMessage());
+            try {
+                $this->service->edit($slide->id, $form);
+                return $this->redirect(['view', 'id' => $slide->id]);
+            } catch (\DomainException $e) {
+                Yii::$app->errorHandler->logException($e);
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
         }
-    }
 
         return $this->render('update', ['model' => $form,
             'slide' => $slide,]);

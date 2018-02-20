@@ -1,9 +1,9 @@
 <?php
 
-namespace domain\modules\slider\repositories;
+namespace abdualiym\slider\repositories;
 
 
-use domain\modules\slider\entities\Slide;
+use abdualiym\slider\entities\Slide;
 
 class SlideRepository
 {

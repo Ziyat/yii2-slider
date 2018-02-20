@@ -1,8 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $slide domain\modules\slider\entities\Slide */
-/* @var $model domain\modules\slider\forms\SlideForm */
+/* @var $slide abdualiym\slider\entities\Slide */
+/* @var $model abdualiym\slider\forms\SlideForm */
 
 $this->title = 'Обновить: ' . $slide->translations[0]['name'];
 $this->params['breadcrumbs'][] = ['label' => 'Слайды', 'url' => ['index']];

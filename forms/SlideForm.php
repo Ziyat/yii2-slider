@@ -1,9 +1,9 @@
 <?php
 
-namespace domain\modules\slider\forms;
+namespace abdualiym\slider\forms;
 
 use abdualiym\languageClass\Language;
-use domain\modules\slider\entities\Slide;
+use abdualiym\slider\entities\Slide;
 use elisdn\compositeForm\CompositeForm;
 
 /**

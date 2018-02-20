@@ -1,8 +1,8 @@
 <?php
 
-namespace domain\modules\slider\helpers;
+namespace abdualiym\slider\helpers;
 
-use domain\modules\slider\entities\Slide;
+use abdualiym\slider\entities\Slide;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace domain\modules\slider\entities;
+namespace abdualiym\slider\entities;
 
 use abdualiym\languageClass\Language;
 use backend\entities\User;
-use domain\modules\slider\entities\queries\SlideQuery;
-use domain\modules\slider\forms\SlideForm;
+use abdualiym\slider\entities\queries\SlideQuery;
+use abdualiym\slider\forms\SlideForm;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;

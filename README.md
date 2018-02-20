@@ -30,5 +30,12 @@ composer require abdualiym/yii2-slider
 php yii migrate
 ```
 
-- add to common config file:
+- add to backend config file:
+```php
+'components' => [
+    'slider' => [
+        'class' => 'slider\Slider',
+    ],
+],
+```
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace domain\modules\slider\services;
+namespace abdualiym\slider\services;
 
 
-use domain\modules\slider\entities\Slide;
-use domain\modules\slider\forms\SlideForm;
-use domain\modules\slider\repositories\SlideRepository;
-use domain\modules\slider\repositories\SlideTranslationRepository;
+use abdualiym\slider\entities\Slide;
+use abdualiym\slider\forms\SlideForm;
+use abdualiym\slider\repositories\SlideRepository;
+use abdualiym\slider\repositories\SlideTranslationRepository;
 
 class SlideManageService
 {

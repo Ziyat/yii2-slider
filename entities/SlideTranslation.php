@@ -1,7 +1,8 @@
 <?php
 
-namespace domain\modules\slider\entities;
+namespace abdualiym\slider\entities;
 
+use abdualiym\slider\Slider;
 use yii\db\ActiveRecord;
 use yiidreamteam\upload\ImageUploadBehavior;
 
@@ -61,26 +62,7 @@ class SlideTranslation extends ActiveRecord
     public function behaviors(): array
     {
         return [
-            [
-                'class' => ImageUploadBehavior::className(),
-                'attribute' => 'file',
-                'createThumbsOnRequest' => true,
-//                'filePath' => '@staticRoot/origin/posts/[[id]].[[extension]]',
-                'filePath' => '@frontend/web/app-images/slider/[[attribute_id]]/[[id]].[[extension]]', // app/static
-//                'fileUrl' => '@static/origin/posts/[[id]].[[extension]]',
-                'fileUrl' => '@frontendUrl/app-images/slider/[[attribute_id]]/[[id]].[[extension]]',// http://static.shop.dev
-//                'thumbPath' => '@staticRoot/cache/posts/[[profile]]_[[id]].[[extension]]',
-                'thumbPath' => '@frontend/web/app-temp/slider/cache/[[attribute_id]]/[[profile]]_[[id]].[[extension]]',
-//                'thumbUrl' => '@static/cache/posts/[[profile]]_[[id]].[[extension]]',
-                'thumbUrl' => '@frontendUrl/app-temp/slider/cache/[[attribute_id]]/[[profile]]_[[id]].[[extension]]',
-                'thumbs' => [
-                    'admin' => ['width' => 220, 'height' => 70],
-                    'thumb' => ['width' => 931, 'height' => 299],
-//                    'category_list' => ['width' => 1000, 'height' => 150],
-//                    'widget_list' => ['width' => 228, 'height' => 228],
-//                    'origin' => ['processor' => [new WaterMarker(1024, 768, '@frontend/web/images/img/cbg.png'), 'process']],
-                ],
-            ],
+            Slider::imageLocations(),
         ];
 
     }

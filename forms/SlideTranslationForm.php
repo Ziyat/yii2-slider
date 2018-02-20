@@ -1,9 +1,9 @@
 <?php
 
-namespace domain\modules\slider\forms;
+namespace abdualiym\slider\forms;
 
 use abdualiym\languageClass\Language;
-use domain\modules\slider\entities\SlideTranslation;
+use abdualiym\slider\entities\SlideTranslation;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;

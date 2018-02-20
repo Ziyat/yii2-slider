@@ -4,7 +4,7 @@ use yii\grid\GridView;
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $searchModel domain\modules\slider\forms\SlideSearch */
+/* @var $searchModel abdualiym\slider\forms\SlideSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Слайды';
@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
             [
-                'value' => function (\domain\modules\slider\entities\Slide $model) {
+                'value' => function (\abdualiym\slider\entities\Slide $model) {
                     return $model->translations[1]->file ? Html::img($model->translations[1]->getThumbFileUrl('file', 'admin')) : null;
                 },
                 'format' => 'raw',
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                     'attribute' => 'id',
-                'value' => function (\domain\modules\slider\entities\Slide $model) {
+                'value' => function (\abdualiym\slider\entities\Slide $model) {
                     return $model->translations[1]->name;
                 },
                 'label' => 'Название',

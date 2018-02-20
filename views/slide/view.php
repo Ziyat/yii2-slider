@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 //use shop\helpers\SliderHelper;
 
 /* @var $this yii\web\View */
-/* @var $slide domain\modules\slider\entities\Slide */
+/* @var $slide abdualiym\slider\entities\Slide */
 
 $this->title = $slide->translations[0]['name'] ?: 'Slider';
 $this->params['breadcrumbs'][] = ['label' => 'Слайды', 'url' => ['index']];
@@ -48,7 +48,7 @@ $langList = \abdualiym\languageClass\Language::langList(Yii::$app->params['langu
                             ],
                             [
                                 'attribute' => 'status',
-                                'value' => \domain\modules\slider\helpers\SlideHelper::statusLabel($slide->status),
+                                'value' => \abdualiym\slider\helpers\SlideHelper::statusLabel($slide->status),
                                 'format' => 'raw',
                             ],
 //                            [

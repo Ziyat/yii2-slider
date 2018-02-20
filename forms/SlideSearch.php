@@ -1,12 +1,12 @@
 <?php
-namespace domain\modules\slider\forms;
+namespace abdualiym\slider\forms;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use domain\modules\slider\entities\Slide;
+use abdualiym\slider\entities\Slide;
 /**
- * SlideSearch represents the model behind the search form about `domain\modules\slider\entities\Slide`.
+ * SlideSearch represents the model behind the search form about `abdualiym\slider\entities\Slide`.
  */
 class SlideSearch extends Slide {
     /**

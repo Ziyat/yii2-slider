@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $model domain\modules\slider\forms\SlideForm */
+/* @var $model abdualiym\slider\forms\SlideForm */
 
 $this->title = 'Добавить';
 $this->params['breadcrumbs'][] = ['label' => 'Слайд', 'url' => ['index']];

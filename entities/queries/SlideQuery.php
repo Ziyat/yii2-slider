@@ -1,8 +1,8 @@
 <?php
 
-namespace domain\modules\slider\entities\queries;
+namespace abdualiym\slider\entities\queries;
 
-use domain\modules\slider\entities\Slide;
+use abdualiym\slider\entities\Slide;
 use yii\db\ActiveQuery;
 
 class SlideQuery extends ActiveQuery

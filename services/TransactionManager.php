@@ -1,6 +1,6 @@
 <?php
 
-namespace domain\modules\slider\services;
+namespace abdualiym\slider\services;
 
 class TransactionManager
 {

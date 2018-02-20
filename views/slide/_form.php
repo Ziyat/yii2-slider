@@ -6,8 +6,8 @@ use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
-/* @var $model domain\modules\slider\forms\SlideForm */
-/* @var $slide domain\modules\slider\entities\Slide */
+/* @var $model abdualiym\slider\forms\SlideForm */
+/* @var $slide abdualiym\slider\entities\Slide */
 
 $langList = Language::langList(Yii::$app->params['languages'], true);
 foreach ($model->translations as $i => $translation) {

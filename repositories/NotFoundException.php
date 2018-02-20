@@ -1,6 +1,6 @@
 <?php
 
-namespace domain\modules\slider\repositories;
+namespace abdualiym\slider\repositories;
 
 class NotFoundException extends \DomainException
 {
