@@ -62,7 +62,7 @@ class SlideTranslation extends ActiveRecord
     public function behaviors(): array
     {
         return [
-            Slider::imageLocations(),
+            (new Slider())->imageLocations(),
         ];
 
     }

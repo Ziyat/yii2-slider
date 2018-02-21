@@ -11,20 +11,26 @@ use abdualiym\slider\services\SlideManageService;
 use abdualiym\slider\services\TransactionManager;
 use Yii;
 use yii\base\Component;
+use yii\base\ViewContextInterface;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 
 /**
  * SlideController implements the CRUD actions for Slide model.
  */
-class SlideController extends Controller
+class SlideController extends Controller implements ViewContextInterface
 {
     private $service;
 
-    public function __construct(string $id, Slider $module, SlideManageService $service, array $config = [])
+    public function __construct($id, $module, SlideManageService $service, $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $service;
+    }
+
+    public function getViewPath()
+    {
+        return Yii::getAlias('@vendor/abdualiym/yii2-slider/views/slide');
     }
 
     public function behaviors(): array

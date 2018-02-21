@@ -3,13 +3,22 @@
 namespace abdualiym\slider;
 
 use Yii;
+use yii\base\Module;
 use yiidreamteam\upload\ImageUploadBehavior;
 
 /**
  * slider module definition class
  */
-class Slider extends \yii\base\Module
+//class Slider extends \yii\base\Module
+class Slider
 {
+    public function init()
+    {
+        parent::init();
+        $this->registerTranslations();
+    }
+
+
     public $filePath = '@frontend/web/app-images/slider/[[attribute_id]]/[[id]].[[extension]]';
     public $fileUrl = '@frontendUrl/app-images/slider/[[attribute_id]]/[[id]].[[extension]]';
     public $thumbPath = '@frontend/web/app-temp/slider/cache/[[attribute_id]]/[[profile]]_[[id]].[[extension]]';
@@ -37,20 +46,6 @@ class Slider extends \yii\base\Module
         ];
     }
 
-
-    /**
-     * @inheritdoc
-     */
-    public $controllerNamespace = 'abdualiym\slider\controllers';
-
-    /**
-     * @inheritdoc
-     */
-    public function init()
-    {
-        parent::init();
-        $this->registerTranslations();
-    }
 
     public function registerTranslations()
     {

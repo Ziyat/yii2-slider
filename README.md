@@ -10,31 +10,17 @@ The extension allows build multi language slider.
 composer require abdualiym/yii2-slider
 ```
 
-- Add to console config file:
-
-```php
-'controllerMap' => [
-    'migrate' => [
-        'class' => 'fishvision\migrate\controllers\MigrateController',
-        'autoDiscover' => true,
-        'migrationPaths' => [
-            '@domain/modules/slider/migrations',
-        ],
-    ],
-],
-```
-
 - **After composer install** run console command for create tables:
 
 ```bash
-php yii migrate
+php yii migrate/up --migrationPath=@vendor/abdualiym/yii2-slider/migrations
 ```
 
 - add to backend config file:
 ```php
-'components' => [
+'controllerMap' => [
     'slider' => [
-        'class' => 'slider\Slider',
+        'class' => 'abdualiym\slider\controllers\SlideController',
     ],
 ],
 ```
